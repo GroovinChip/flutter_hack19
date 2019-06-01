@@ -24,33 +24,33 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flubber Community Challenges',
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        primaryColor: Colors.indigo,
-        accentColor: Colors.indigoAccent,
-        inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(),
+    return DynamicTheme(
+        defaultBrightness: Brightness.light,
+        data: (brightness) => ThemeData(
+          brightness: brightness,
+          primarySwatch: Colors.indigo,
+          primaryColor: Colors.indigo,
+          accentColor: Colors.indigoAccent,
+          //fontFamily: 'GoogleSans'
         ),
-      ),
-      home: LoginScreen(),
-      debugShowCheckedModeBanner: false,
-      routes: <String, WidgetBuilder>{
-        "/CurrentChallenge": (BuildContext context) => CurrentChallenge(),
-        "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
-        "/VoteOnChallengeSuggestions": (BuildContext context) => ChallengeSuggestions(),
-        "/HomeScreen": (BuildContext context) => HomeScreen()
-        /*"/HallOfFame": (BuildContext context) => HallOfFame(),
-        "/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
-        "/HallOfFame": (BuildContext context) => HallOfFame(),
-        "/HomeScreen": (BuildContext context) => HomeScreen()
-        "/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
-        "/VoteOnChallengeSuggestions": (BuildContext context) => VoteOnChallengeSuggestions(),
-        "/SuggestChallenge": (BuildContext context) => SuggestChallenge(),
-        "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
-        "/Settings": (BuildContext context) => Settings()*/
-      },
+        themedWidgetBuilder: (context, theme) {
+          return MaterialApp(
+            title: 'Flutter Community Challenges',
+            theme: theme,
+            home: HomeScreen(),
+            debugShowCheckedModeBanner: false,
+            routes: <String, WidgetBuilder>{
+              "/LoginScreen": (BuildContext context) => LoginScreen(),
+              "/CurrentChallenge": (BuildContext context) => CurrentChallenge(),
+              "/HallOfFame": (BuildContext context) => HallOfFame(),
+              //"/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
+              //"/VoteOnChallengeSuggestions": (BuildContext context) => VoteOnChallengeSuggestions(),
+              //"/SuggestChallenge": (BuildContext context) => SuggestChallenge(),
+              "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
+              //"/Settings": (BuildContext context) => Settings(),
+            },
+          );
+        }
     );
   }
 }

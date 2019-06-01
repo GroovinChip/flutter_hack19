@@ -8,8 +8,6 @@ class HallOfFame extends StatefulWidget {
 class _HallOfFameState extends State<HallOfFame> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child:Text("This is the HallOfFame")
-      );
+    return Text("This is the HallOfFame");
   }
 }

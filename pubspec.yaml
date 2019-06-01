@@ -29,6 +29,7 @@ dependencies:
   rounded_modal: ^1.0.0
   groovin_widgets: ^1.4.2
   outline_material_icons: ^0.1.0
+  package_info: ^0.3.2
 
 dev_dependencies:
   flutter_test:

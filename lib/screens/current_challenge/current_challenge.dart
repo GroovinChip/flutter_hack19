@@ -11,7 +11,9 @@ class _CurrentChallengeState extends State<CurrentChallenge> {
     return Text(
       'Current Challenge',
       style: TextStyle(
-        color: Colors.black,
+        color: DynamicTheme.of(context).brightness == Brightness.light
+          ? Colors.black
+          : Colors.white,
       ),
     );
   }

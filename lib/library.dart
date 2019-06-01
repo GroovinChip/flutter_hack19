@@ -9,6 +9,8 @@ export 'package:groovin_material_icons/groovin_material_icons.dart';
 export 'package:rounded_modal/rounded_modal.dart';
 export 'package:groovin_widgets/groovin_widgets.dart';
 export 'package:outline_material_icons/outline_material_icons.dart';
+export 'package:package_info/package_info.dart';
+export 'package:dynamic_theme/dynamic_theme.dart';
 
 /// Screens
 export 'package:flubber_nyc_hack19/screens/home_screen/home_screen.dart';
