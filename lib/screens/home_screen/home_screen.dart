@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text("Log Out"),
                                 onPressed: () {
                                   Navigator.of(context).pushNamedAndRemoveUntil(
-                                      '/', (Route<dynamic> route) => false);
+                                      '/LoginScreen', (Route<dynamic> route) => false);
                                 },
                               ),
                             ),

@@ -37,9 +37,10 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'Flutter Community Challenges',
             theme: theme,
-            home: HomeScreen(),
+            home: LoginScreen(),
             debugShowCheckedModeBanner: false,
             routes: <String, WidgetBuilder>{
+              "/HomeScreen": (BuildContext context) => HomeScreen(),
               "/LoginScreen": (BuildContext context) => LoginScreen(),
               "/CurrentChallenge": (BuildContext context) => CurrentChallenge(),
               "/HallOfFame": (BuildContext context) => HallOfFame(),
