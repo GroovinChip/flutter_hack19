@@ -7,17 +7,20 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   Widget _currentScreen = CurrentChallenge();
+  String _currentTitle = "Current Challenge";
 
   void _changeCurrentScreen(String screenName){
     setState(() {
       switch(screenName) {
         case "HallOfFame": {
           _currentScreen = HallOfFame();
+          _currentTitle = "Hall of Fame";
         }
         break;
 
         case "UpComingChallenges": {
           _currentScreen = UpcomingChallengesList();
+          _currentTitle = "Upcoming Challenges";
         }
         break;
 
@@ -36,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Theme.of(context).canvasColor,
         title: Text(
-          'Current Challenge',
+          _currentTitle,
           style: TextStyle(
             color: Colors.black,
           ),
