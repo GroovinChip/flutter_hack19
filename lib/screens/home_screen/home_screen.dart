@@ -52,6 +52,12 @@ class _HomeScreenState extends State<HomeScreen> {
         }
         break;
 
+        case "HomeScreen": {
+          _currentScreen = CurrentChallenge();
+          _currentTitle = "Current Challenge";
+        }
+        break;
+
         default: {
           //statements;
         }
@@ -89,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ? Colors.black
                 : Colors.white,
             onPressed: () {
-              Navigator.pushNamed(context, '/HomeScreen');
+              _changeCurrentScreen("HomeScreen");
             },
           ),
         ],
