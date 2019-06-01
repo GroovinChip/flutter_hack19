@@ -7,4 +7,4 @@ export 'package:flutter/foundation.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 
 /// Screens
-export 'screens/home_screen/home_screen.dart';
+export 'package:flubber_nyc_hack19/screens/home_screen/home_screen/home_screen.dart';
