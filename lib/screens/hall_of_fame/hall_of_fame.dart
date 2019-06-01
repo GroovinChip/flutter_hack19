@@ -1,15 +1,62 @@
 import 'package:flubber_nyc_hack19/library.dart';
 
-class HallOfFame extends StatefulWidget {
-  @override
-  _HallOfFameState createState() => _HallOfFameState();
-}
 
-class _HallOfFameState extends State<HallOfFame> {
+
+
+class HallOfFame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child:Text("This is the HallOfFame")
-      );
+    // TODO: implement build
+    return ListView(
+      children: <Widget>[
+        Container(
+          height: 100,
+          child: Card(
+
+              child: Center(child: Text(
+                "Winner 1",
+                style: TextStyle(fontSize: 20),
+
+              ))
+          ),
+        ),
+        Container(
+          height: 100,
+          child: Card(
+
+              child: Center(child: Text(
+                "Winner 2",
+                style: TextStyle(fontSize: 20),
+
+              ))
+          ),
+        ),
+        Container(
+          height: 100,
+          child: Card(
+
+              child: Center(child: Text(
+                "Winner 3",
+                style: TextStyle(fontSize: 20),
+
+              ))
+          ),
+        ),
+
+        Container(
+          height: 100,
+          child: Card(
+
+              child: Center(child: Text(
+                "Winner 4",
+                style: TextStyle(fontSize: 20),
+
+              ))
+          ),
+        ),
+
+      ],
+    );
   }
+
 }
