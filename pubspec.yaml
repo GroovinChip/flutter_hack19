@@ -27,6 +27,7 @@ dependencies:
   cloud_firestore: ^0.12.1
   groovin_material_icons: ^1.1.6
   rounded_modal: ^1.0.0
+  groovin_widgets: ^1.4.2
 
 dev_dependencies:
   flutter_test:

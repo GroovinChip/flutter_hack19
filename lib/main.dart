@@ -29,11 +29,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         primaryColor: Colors.indigo,
+        accentColor: Colors.indigoAccent,
       ),
       home: LoginScreen(),
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         "/CurrentChallenge": (BuildContext context) => CurrentChallenge(),
+        "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
         /*"/HallOfFame": (BuildContext context) => HallOfFame(),
         "/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
         "/VoteOnChallengeSuggestions": (BuildContext context) => VoteOnChallengeSuggestions(),

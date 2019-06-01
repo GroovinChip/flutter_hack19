@@ -9,6 +9,17 @@ class _CurrentChallengeState extends State<CurrentChallenge> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Theme.of(context).canvasColor,
+        title: Text(
+          'Current Challenge',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Container(),
       ),
