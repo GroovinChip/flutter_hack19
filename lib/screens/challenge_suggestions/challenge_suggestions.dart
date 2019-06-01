@@ -85,7 +85,15 @@ class _ChallengeSuggestionsState extends State<ChallengeSuggestions> {
                                 hasUpvoted = true;
                                 upvoteColor = Colors.orange;
                               });
-                            } else if (hasDownvoted == true)
+                            } else if (hasDownvoted == true && hasUpvoted == false) {
+                              setState(() {
+                                voteCount += 1;
+                                hasUpvoted = true;
+                                hasDownvoted = false;
+                                upvoteColor = Colors.orange;
+                                downvoteColor = Colors.black;
+                              });
+                            }
                           },
                         ),
                         Text(voteCount.toString()),
