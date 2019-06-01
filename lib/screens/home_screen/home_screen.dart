@@ -24,6 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
         }
         break;
 
+        case "ChallengeSuggestions": {
+          _currentScreen = ChallengeSuggestions();
+          _currentTitle = "Challenge Suggestions";
+        }
+        break;
+
         default: {
           //statements;
         }
@@ -100,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: IconButton(
                     icon: Icon(GroovinMaterialIcons.ballot_outline),
                     onPressed: () {
-                      Navigator.pushNamed(context, '/VoteOnChallengeSuggestions');
+                      _changeCurrentScreen("ChallengeSuggestions");
                     },
                   ),
                 ),
