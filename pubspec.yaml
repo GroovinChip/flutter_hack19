@@ -26,6 +26,7 @@ dependencies:
   dynamic_theme: ^1.0.1
   cloud_firestore: ^0.12.1
   groovin_material_icons: ^1.1.6
+  rounded_modal: ^1.0.0
 
 dev_dependencies:
   flutter_test:
