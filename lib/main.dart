@@ -40,12 +40,16 @@ class MyApp extends StatelessWidget {
         "/CurrentChallenge": (BuildContext context) => CurrentChallenge(),
         "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
         "/VoteOnChallengeSuggestions": (BuildContext context) => ChallengeSuggestions(),
+        "/HomeScreen": (BuildContext context) => HomeScreen()
         /*"/HallOfFame": (BuildContext context) => HallOfFame(),
+        "/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
+        "/HallOfFame": (BuildContext context) => HallOfFame(),
+        "/HomeScreen": (BuildContext context) => HomeScreen()
         "/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
         "/VoteOnChallengeSuggestions": (BuildContext context) => VoteOnChallengeSuggestions(),
         "/SuggestChallenge": (BuildContext context) => SuggestChallenge(),
         "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
-        "/Settings": (BuildContext context) => Settings(),*/
+        "/Settings": (BuildContext context) => Settings()*/
       },
     );
   }

@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       "Login",
                       style: TextStyle(color: Colors.white),
                     ),
-                    onPressed: () => Navigator.pushNamedAndRemoveUntil(context, '/CurrentChallenge', (Route<dynamic> route) => false),
+                    onPressed: () => Navigator.pushNamedAndRemoveUntil(context, '/HomeScreen', (Route<dynamic> route) => false),
                   ),
                 ],
               ),
