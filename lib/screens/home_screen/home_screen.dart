@@ -29,17 +29,26 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _currentScreen = CurrentChallenge();
+  String _currentTitle = "Current Challenge";
 
   void _changeCurrentScreen(String screenName){
     setState(() {
       switch(screenName) {
         case "HallOfFame": {
           _currentScreen = HallOfFame();
+          _currentTitle = "Hall of Fame";
         }
         break;
 
         case "UpComingChallenges": {
           _currentScreen = UpcomingChallengesList();
+          _currentTitle = "Upcoming Challenges";
+        }
+        break;
+
+        case "ChallengeSuggestions": {
+          _currentScreen = ChallengeSuggestions();
+          _currentTitle = "Challenge Suggestions";
         }
         break;
 
@@ -65,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Theme.of(context).canvasColor,
         title: Text(
-          'Current Challenge',
+          _currentTitle,
           style: TextStyle(
             color: DynamicTheme.of(context).brightness == Brightness.light
               ? Colors.black
@@ -192,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: IconButton(
                     icon: Icon(GroovinMaterialIcons.ballot_outline),
                     onPressed: () {
-                      Navigator.pushNamed(context, '/VoteOnChallengeSuggestions');
+                      _changeCurrentScreen("ChallengeSuggestions");
                     },
                   ),
                 ),
