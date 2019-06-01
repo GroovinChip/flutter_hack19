@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "851779077094",
+    "firebase_url": "https://flubber-hack19.firebaseio.com",
+    "project_id": "flubber-hack19",
+    "storage_bucket": "flubber-hack19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851779077094:android:4c449c2ca6c552fd",
+        "android_client_info": {
+          "package_name": "com.flubber.flubber_nyc_hack19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851779077094-4j9ob0glinmilhqh3ageka2k8s5kh866.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApKM8mah9efaYlgep6ZkbUHuNCqMyA02g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851779077094-4j9ob0glinmilhqh3ageka2k8s5kh866.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

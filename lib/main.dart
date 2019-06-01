@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.indigo,
       ),
       home: HomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
