@@ -27,10 +27,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flubber Community Challenges',
       theme: ThemeData(
+        primarySwatch: Colors.indigo,
         primaryColor: Colors.indigo,
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
+      routes: <String, WidgetBuilder>{
+        "/CurrentChallenge": (BuildContext context) => CurrentChallenge(),
+        /*"/HallOfFame": (BuildContext context) => HallOfFame(),
+        "/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
+        "/VoteOnChallengeSuggestions": (BuildContext context) => VoteOnChallengeSuggestions(),
+        "/SuggestChallenge": (BuildContext context) => SuggestChallenge(),
+        "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
+        "/Settings": (BuildContext context) => Settings(),*/
+      },
     );
   }
 }
