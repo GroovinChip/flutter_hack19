@@ -31,7 +31,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.indigo,
           primaryColor: Colors.indigo,
           accentColor: Colors.indigoAccent,
-          //fontFamily: 'GoogleSans'
+          inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(),
+          ),
         ),
         themedWidgetBuilder: (context, theme) {
           return MaterialApp(

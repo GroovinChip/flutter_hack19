@@ -70,6 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Theme.of(context).canvasColor,
@@ -81,6 +82,17 @@ class _HomeScreenState extends State<HomeScreen> {
               : Colors.white,
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(OMIcons.home),
+            color: DynamicTheme.of(context).brightness == Brightness.light
+                ? Colors.black
+                : Colors.white,
+            onPressed: () {
+              Navigator.pushNamed(context, '/HomeScreen');
+            },
+          ),
+        ],
       ),
       body: Center(
         child: _currentScreen,

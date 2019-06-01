@@ -19,7 +19,9 @@ class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
         title: Text(
           'Submit Challenge Entry',
           style: TextStyle(
-            color: Colors.black,
+            color: DynamicTheme.of(context).brightness == Brightness.light
+                ? Colors.black
+                : Colors.white,
           ),
         ),
       ),
@@ -47,7 +49,12 @@ class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
                   ],
                   hint: Row(
                     children: <Widget>[
-                      Icon(GroovinMaterialIcons.github_circle),
+                      Icon(
+                        GroovinMaterialIcons.github_circle,
+                        color: DynamicTheme.of(context).brightness == Brightness.light
+                          ? Colors.black
+                          : Colors.white,
+                      ),
                       SizedBox(
                         width: 12,
                       ),
@@ -64,7 +71,12 @@ class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: 'App Description',
-                      prefixIcon: Icon(GroovinMaterialIcons.message_text),
+                      prefixIcon: Icon(
+                        GroovinMaterialIcons.message_text,
+                        color: DynamicTheme.of(context).brightness == Brightness.light
+                          ? Colors.black
+                          : Colors.white,
+                      ),
                   ),
                   maxLines: 2,
                 ),
@@ -72,7 +84,9 @@ class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: Divider(
-                  color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                  color: DynamicTheme.of(context).brightness == Brightness.light
+                    ? Colors.black
+                    : Colors.white,
                 ),
               ),
               Padding(
@@ -81,7 +95,11 @@ class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
                   //leading: Icon(OMIcons.image),
                   title: Text("Upload Screenshots"),
                   trailing: IconButton(
-                    icon: Icon(Icons.add_photo_alternate, color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
+                    icon: Icon(Icons.add_photo_alternate,
+                      color: DynamicTheme.of(context).brightness == Brightness.light
+                      ? Colors.black
+                      : Colors.white,
+                    ),
                     onPressed: () {
                       //checkPermissions();
                       //getImage();
