@@ -30,12 +30,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
         primaryColor: Colors.indigo,
         accentColor: Colors.indigoAccent,
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(),
+        ),
       ),
       home: LoginScreen(),
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         "/CurrentChallenge": (BuildContext context) => CurrentChallenge(),
         "/SubmitEntryToChallenge": (BuildContext context) => SubmitEntryToChallenge(),
+        "/VoteOnChallengeSuggestions": (BuildContext context) => ChallengeSuggestions(),
         /*"/HallOfFame": (BuildContext context) => HallOfFame(),
         "/UpcomingChallenges": (BuildContext context) => UpcomingChallenges(),
         "/VoteOnChallengeSuggestions": (BuildContext context) => VoteOnChallengeSuggestions(),

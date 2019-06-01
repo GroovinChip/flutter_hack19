@@ -6,6 +6,7 @@ class SubmitEntryToChallenge extends StatefulWidget {
 }
 
 class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
+  var repoSelection;
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +30,19 @@ class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: OutlineDropdownButton(
+
                   items: [
                     DropdownMenuItem(
                       child: Text('Demo Repository 1'),
                       value: 'Demo Repository 1',
+                    ),
+                    DropdownMenuItem(
+                      child: Text('Demo Repository 2'),
+                      value: 'Demo Repository 2',
+                    ),
+                    DropdownMenuItem(
+                      child: Text('Demo Repository 3'),
+                      value: 'Demo Repository 3',
                     ),
                   ],
                   hint: Row(
@@ -45,8 +55,38 @@ class _SubmitEntryToChallengeState extends State<SubmitEntryToChallenge> {
                     ],
                   ),
                   isExpanded: true,
-                  value: "test",
+                  value: repoSelection,
                   onChanged: (value) {},
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'App Description',
+                      prefixIcon: Icon(GroovinMaterialIcons.message_text),
+                  ),
+                  maxLines: 2,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Divider(
+                  color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 8.0),
+                child: ListTile(
+                  //leading: Icon(OMIcons.image),
+                  title: Text("Upload Screenshots"),
+                  trailing: IconButton(
+                    icon: Icon(Icons.add_photo_alternate, color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
+                    onPressed: () {
+                      //checkPermissions();
+                      //getImage();
+                    },
+                  ),
                 ),
               ),
             ],
